@@ -11,7 +11,35 @@
 		792BC92C1DD906D000AD4708 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792BC92B1DD906D000AD4708 /* ViewController.swift */; };
 		792BC92E1DD906D000AD4708 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 792BC92D1DD906D000AD4708 /* Assets.xcassets */; };
 		792BC9311DD906D000AD4708 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 792BC92F1DD906D000AD4708 /* Main.storyboard */; };
+		792BC93F1DD90A2800AD4708 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792BC93E1DD90A2800AD4708 /* Cocoa.framework */; };
+		792BC9441DD90A2800AD4708 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792BC9431DD90A2800AD4708 /* SourceEditorExtension.swift */; };
+		792BC9461DD90A2800AD4708 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792BC9451DD90A2800AD4708 /* SourceEditorCommand.swift */; };
+		792BC94A1DD90A2800AD4708 /* Signed Comment.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 792BC93C1DD90A2800AD4708 /* Signed Comment.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		792BC9481DD90A2800AD4708 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 792BC91E1DD906D000AD4708 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 792BC93B1DD90A2800AD4708;
+			remoteInfo = "Signed Comment Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		792BC94E1DD90A2800AD4708 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				792BC94A1DD90A2800AD4708 /* Signed Comment.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		792BC9261DD906D000AD4708 /* Signed Comment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Signed Comment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +48,12 @@
 		792BC92D1DD906D000AD4708 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		792BC9301DD906D000AD4708 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		792BC9321DD906D000AD4708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		792BC93C1DD90A2800AD4708 /* Signed Comment.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Signed Comment.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		792BC93E1DD90A2800AD4708 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		792BC9421DD90A2800AD4708 /* Signed_Comment_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Signed_Comment_Extension.entitlements; sourceTree = "<group>"; };
+		792BC9431DD90A2800AD4708 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		792BC9451DD90A2800AD4708 /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		792BC9471DD90A2800AD4708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +64,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		792BC9391DD90A2800AD4708 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				792BC93F1DD90A2800AD4708 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -37,6 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				792BC9281DD906D000AD4708 /* Signed Comment */,
+				792BC9401DD90A2800AD4708 /* Signed Comment Extension */,
+				792BC93D1DD90A2800AD4708 /* Frameworks */,
 				792BC9271DD906D000AD4708 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				792BC9261DD906D000AD4708 /* Signed Comment.app */,
+				792BC93C1DD90A2800AD4708 /* Signed Comment.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,6 +106,33 @@
 			path = "Signed Comment";
 			sourceTree = "<group>";
 		};
+		792BC93D1DD90A2800AD4708 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				792BC93E1DD90A2800AD4708 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		792BC9401DD90A2800AD4708 /* Signed Comment Extension */ = {
+			isa = PBXGroup;
+			children = (
+				792BC9431DD90A2800AD4708 /* SourceEditorExtension.swift */,
+				792BC9451DD90A2800AD4708 /* SourceEditorCommand.swift */,
+				792BC9471DD90A2800AD4708 /* Info.plist */,
+				792BC9411DD90A2800AD4708 /* Supporting Files */,
+			);
+			path = "Signed Comment Extension";
+			sourceTree = "<group>";
+		};
+		792BC9411DD90A2800AD4708 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				792BC9421DD90A2800AD4708 /* Signed_Comment_Extension.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,15 +143,34 @@
 				792BC9221DD906D000AD4708 /* Sources */,
 				792BC9231DD906D000AD4708 /* Frameworks */,
 				792BC9241DD906D000AD4708 /* Resources */,
+				792BC94E1DD90A2800AD4708 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				792BC9491DD90A2800AD4708 /* PBXTargetDependency */,
 			);
 			name = "Signed Comment";
 			productName = "Signed Comment";
 			productReference = 792BC9261DD906D000AD4708 /* Signed Comment.app */;
 			productType = "com.apple.product-type.application";
+		};
+		792BC93B1DD90A2800AD4708 /* Signed Comment Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 792BC94B1DD90A2800AD4708 /* Build configuration list for PBXNativeTarget "Signed Comment Extension" */;
+			buildPhases = (
+				792BC9381DD90A2800AD4708 /* Sources */,
+				792BC9391DD90A2800AD4708 /* Frameworks */,
+				792BC93A1DD90A2800AD4708 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Signed Comment Extension";
+			productName = "Signed Comment Extension";
+			productReference = 792BC93C1DD90A2800AD4708 /* Signed Comment.appex */;
+			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -92,6 +183,11 @@
 				ORGANIZATIONNAME = "Hsoi Enterprises LLC";
 				TargetAttributes = {
 					792BC9251DD906D000AD4708 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 4WUC25D9BH;
+						ProvisioningStyle = Automatic;
+					};
+					792BC93B1DD90A2800AD4708 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 4WUC25D9BH;
 						ProvisioningStyle = Automatic;
@@ -112,6 +208,7 @@
 			projectRoot = "";
 			targets = (
 				792BC9251DD906D000AD4708 /* Signed Comment */,
+				792BC93B1DD90A2800AD4708 /* Signed Comment Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -123,6 +220,13 @@
 			files = (
 				792BC92E1DD906D000AD4708 /* Assets.xcassets in Resources */,
 				792BC9311DD906D000AD4708 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		792BC93A1DD90A2800AD4708 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +242,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		792BC9381DD90A2800AD4708 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				792BC9441DD90A2800AD4708 /* SourceEditorExtension.swift in Sources */,
+				792BC9461DD90A2800AD4708 /* SourceEditorCommand.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		792BC9491DD90A2800AD4708 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 792BC93B1DD90A2800AD4708 /* Signed Comment Extension */;
+			targetProxy = 792BC9481DD90A2800AD4708 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		792BC92F1DD906D000AD4708 /* Main.storyboard */ = {
@@ -245,7 +366,9 @@
 		792BC9361DD906D100AD4708 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4WUC25D9BH;
 				INFOPLIST_FILE = "Signed Comment/Info.plist";
@@ -259,13 +382,49 @@
 		792BC9371DD906D100AD4708 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4WUC25D9BH;
 				INFOPLIST_FILE = "Signed Comment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hsoienterprises.Signed-Comment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		792BC94C1DD90A2800AD4708 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Signed Comment Extension/Signed_Comment_Extension.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4WUC25D9BH;
+				INFOPLIST_FILE = "Signed Comment Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hsoienterprises.Signed-Comment.Signed-Comment-Extension";
+				PRODUCT_NAME = "Signed Comment";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		792BC94D1DD90A2800AD4708 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Signed Comment Extension/Signed_Comment_Extension.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4WUC25D9BH;
+				INFOPLIST_FILE = "Signed Comment Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hsoienterprises.Signed-Comment.Signed-Comment-Extension";
+				PRODUCT_NAME = "Signed Comment";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -287,6 +446,14 @@
 			buildConfigurations = (
 				792BC9361DD906D100AD4708 /* Debug */,
 				792BC9371DD906D100AD4708 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		792BC94B1DD90A2800AD4708 /* Build configuration list for PBXNativeTarget "Signed Comment Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				792BC94C1DD90A2800AD4708 /* Debug */,
+				792BC94D1DD90A2800AD4708 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
