@@ -137,7 +137,17 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             return
         }
         
-        let commentString = "\(commentPrefix) \(modifierPrefix) \(username) \(dateString) - "
+        var commentString = "\(commentPrefix)"
+        if !modifierPrefix.isEmpty {
+            commentString += " \(modifierPrefix)"
+        }
+        if !username.isEmpty {
+            commentString += " \(username)"
+        }
+        if !dateString.isEmpty {
+            commentString += " \(dateString)"
+        }
+        commentString += " - "
         
         
         let line = buffer.lines[lineIndex] as! NSString
