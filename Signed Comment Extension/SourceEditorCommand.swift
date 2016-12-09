@@ -68,10 +68,13 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         }
         
         // Hsoi 2016-09-25 - for now, only support "no selection". Just plain old insertion point.
-        guard firstSelection.start.line == firstSelection.end.line && firstSelection.start.column == firstSelection.end.column else {
-            error = ErrorCode.onlyPlainInsertionSupported.asError()
-            return
-        }
+        // Hsoi 2016-12-09 - Nah, let's support replacing the selected text. I find myself wanting to do this
+        // enough, so let's do it. Besides, the only reason I didn't do it at first was because I was learning
+        // and trying to figure out the whole process for working with the XCSourceEditorCommandInvocation
+//        guard firstSelection.start.line == firstSelection.end.line && firstSelection.start.column == firstSelection.end.column else {
+//            error = ErrorCode.onlyPlainInsertionSupported.asError()
+//            return
+//        }
         
         let lineIndex = firstSelection.start.line
         
