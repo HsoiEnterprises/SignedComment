@@ -77,9 +77,6 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         
         let username = "Hsoi"   // TODO: eventually allow user customization
         
-        // Hsoi 2016-09-12 FIXME: something
-        // TODO: do
-        
         dateFormatter.dateFormat = "yyyy-MM-dd" // TODO: eventually get this from some NSUserDefaults that allows the user to customize their desired date.
         let dateString = dateFormatter.string(from: Date())
         
