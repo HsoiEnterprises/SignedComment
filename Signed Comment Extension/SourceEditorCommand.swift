@@ -53,6 +53,29 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             completionHandler(error)
         }
         
+        /*
+ 
+         notes to myself.
+         
+         So it seems buffer.lines contains ALL the lines of of the file... well, whatever the grand buffer is that I'm working with.
+         
+         then buffer.selections has the ranges... and like I selected some text and there was a range that went from "line 16, column 4" to "line 19, colulmn 5". Which
+         was the actual selection.
+         
+         Yup. That's the thing.
+         
+         So it LOOKS like what I have to do, to do text manipulation is that the selections are relevative/referencing the buffer
+         
+         So I GUESS take the line info from the buffer, then go into the buffer.lines and manipulate what's in there with the selection information.
+         
+         ---
+         
+         Also learned that you can't directly debug. You do NOT enable "debug this executable" in the scheme -- system integrity protection
+         won't let you then attach. So after you fire it all up and get the special gray Xcode running, go to Debug menu (in blue Xcode)
+         and Attach to Process. You should see your extension in the list, like at the top of the list. Attach, and then it works.
+         
+        */
+        
         let buffer = invocation.buffer
         
         // Hsoi 2016-09-25 - Only going to work with the first selection -- if there's more than 1 selection, I don't see
