@@ -155,7 +155,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         // Hsoi 2016-09-25 - move the selection to the end of what we just inserted, so the user can immediately start typing.
         let newSelection = firstSelection
         newSelection.start.column += commentString.characters.count
-        newSelection.end.column += commentString.characters.count
+        newSelection.end.column = newSelection.start.column
         buffer.selections[0] = newSelection
     }
     
