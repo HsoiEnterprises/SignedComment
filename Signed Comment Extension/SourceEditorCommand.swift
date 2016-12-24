@@ -131,7 +131,8 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
              "public.c-plus-plus-header",
              "public.c-plus-plus-source",
              "com.sun.java-source ",
-             "public.php-script":
+             "public.php-script",
+             "com.apple.xcode.configsettings":
             commentPrefix = "//"
             
         case "public.shell-script",
