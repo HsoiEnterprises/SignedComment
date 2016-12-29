@@ -53,6 +53,8 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             completionHandler(error)
         }
         
+        let groupUserDefaults = UserDefaults(suiteName: "4WUC25D9BH.com.hsoienterprises.SignedComment")
+        
         /*
  
          notes to myself.
@@ -101,9 +103,9 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         
         let lineIndex = firstSelection.start.line
         
-        let username = "Hsoi"   // TODO: eventually allow user customization
+        let username = groupUserDefaults?.string(forKey: "\(PrefKeys.commenterName.rawValue)") ?? "Hsoi"
         
-        dateFormatter.dateFormat = "yyyy-MM-dd" // TODO: eventually get this from some NSUserDefaults that allows the user to customize their desired date.
+        dateFormatter.dateFormat = groupUserDefaults?.string(forKey: "dateFormat") ?? "yyyy-MM-dd"
         let dateString = dateFormatter.string(from: Date())
         
         

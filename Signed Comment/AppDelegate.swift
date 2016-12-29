@@ -12,11 +12,15 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
 
-
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+    func applicationDidFinishLaunching(_ notification: Notification) {
+        let defaults: [String:Any] = [
+            PrefKeys.commenterName.rawValue: "Hsoi",
+            PrefKeys.dateFormat.rawValue: "yyyy-MM-dd"
+        ]
+        UserDefaults.standard.register(defaults: defaults)
     }
-
+    
+    
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
